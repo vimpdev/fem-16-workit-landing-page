@@ -3,9 +3,6 @@
     /* Establish a consistent box model */
     box-sizing: border-box;
 
-    /* Prevent layout shift when scrollbars appear/disappear */
-    scrollbar-gutter: stable;
-
     /* Prevent font size inflation on iOS */
     -webkit-text-size-adjust: 100%;
   }
