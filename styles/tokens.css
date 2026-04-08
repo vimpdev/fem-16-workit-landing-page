@@ -68,5 +68,7 @@
     --fs-1000: 3.5rem;
     --fs-1100: 3.75rem;
     --fs-1200: 5rem;
+
+    --transition-fast: .25s ease-out;
   }
 }

@@ -1,4 +1,4 @@
-@layer reset, fonts, tokens, base, layout, components, utilities, responsive;
+@layer reset, fonts, tokens, base, layout, components, utilities, responsive, states;
 
 @import url('./reset.css') layer(reset);
 @import url('./fonts.css') layer(fonts);
@@ -107,6 +107,12 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  .social__link {
+    display: inline-flex;
+    color: var(--color-icon-default);
+    transition: color var(--transition-fast);
+  }
 }
 
 @layer components {
@@ -128,6 +134,7 @@
     display: inline-block;
     font-weight: var(--fw-bold);
     line-height: 1.8;
+    transition: color var(--transition-fast), background-color var(--transition-fast);
   }
 
   .btn--neutral {
@@ -142,6 +149,7 @@
     font-size: var(--fs-200);
     background-color: var(--color-bg-accent);
     color: var(--color-text-primary);
+    border: 2px solid var(--color-bg-accent);
   }
 
   /* IMAGES */
@@ -234,6 +242,7 @@
     inline-size: 100%;
     block-size: 2px;
     background-color: currentColor;
+    transition: inline-size var(--transition-fast);
   }
 }
 
@@ -253,7 +262,6 @@
   .social__icon {
     block-size: 1.25rem;
     aspect-ratio: 1;
-    color: var(--color-icon-default);
   }
 }
 
@@ -387,5 +395,29 @@
     .founder__description {
       font-size: var(--fs-300);
     }
+  }
+}
+
+@layer states {
+  .btn:focus-visible {
+    outline: none;
+  }
+
+  .btn--neutral:is(:hover, :focus-visible) {
+    color: var(--color-bg-accent);
+  }
+
+  .btn--primary:is(:hover, :focus-visible) {
+    color: var(--color-bg-accent);
+    background-color: transparent;
+  }
+
+  .social__link:is(:hover, :focus-visible) {
+    color: var(--color-bg-strong);
+    outline-color: currentColor;
+  }
+
+  .attribution__link:is(:hover, :focus-visible)::after {
+    inline-size: 0;
   }
 }
