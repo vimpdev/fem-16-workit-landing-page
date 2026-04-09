@@ -15,7 +15,7 @@ This is a solution to the [Workit landing page challenge on Frontend Mentor](htt
 ## 🔗 Links
 
 - 🌎 [Live site](https://vimpdev.github.io/fem-16-workit-landing-page/)
-<!-- - 📌 [Frontend Mentor solution]() -->
+- 📌 [Frontend Mentor solution](https://www.frontendmentor.io/solutions/workit-landing-page-mobile-first-responsive-and-modern-css-BGb_IBVLvs)
 
 ---
 
